@@ -5,25 +5,24 @@
 namespace mf_dev_backend.Migrations
 {
     /// <inheritdoc />
-    public partial class M04AddTableVeiculo : Migration
+    public partial class M03AddTableUsuarios : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Veiculos",
+                name: "Usuarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Placa = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AnoFabricacao = table.Column<int>(type: "int", nullable: false),
-                    AnoModelo = table.Column<int>(type: "int", nullable: false)
+                    nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Perfil = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Veiculos", x => x.Id);
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
                 });
         }
 
@@ -31,7 +30,7 @@ namespace mf_dev_backend.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Veiculos");
+                name: "Usuarios");
         }
     }
 }

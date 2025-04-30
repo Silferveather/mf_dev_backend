@@ -12,7 +12,7 @@ namespace mf_dev_backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20250429192308_M04-AddTableVeiculo")]
-    partial class M04AddTableVeiculo
+    partial class M01AddTableVeiculo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
